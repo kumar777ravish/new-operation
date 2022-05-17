@@ -1,41 +1,49 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace divisible_9
+namespace PALLENDROME
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n;
-            int sum = 0;
-            int rem = 0;
-            int res = 0;
-            Console.WriteLine("Enter a number");
+            int n, sum = 0, t,r ;
+            Console.WriteLine("Enter the number");
             n = Convert.ToInt32(Console.ReadLine());
-            res = n;
-            while (res > 0)
+            t = n;
+            while (n > 0)
             {
-                rem = res % 10;
-                sum = sum + rem;
-                res = res / 10;
+                r = n % 10;
+                sum = sum * 10 + r;
+                n = n / 10;
             }
-            Console.WriteLine(sum);
-            if (n % 3 == 0)
+            if (t == sum)
             {
-                Console.WriteLine("{0} is divisible by 9", n);
+                Console.WriteLine("{0} is a pallindrome", sum);
             }
             else
             {
-                Console.WriteLine("{0} is not divisible by 9", n);
+                Console.WriteLine("{0} is not a pallindrome", sum);
             }
-
             Console.ReadLine();
+
+               
+
+
+
+
+
+                ;
+                
+
+
+
+
+
         }
     }
 }
-
-
