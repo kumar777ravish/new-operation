@@ -3,37 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-  
-namespace divisiblity_testing
+
+namespace ravish.test2nd
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n;
-            int sum = 0;
-            int rem;
-            int res;
+            int A, B;
+            Console.WriteLine("Enter the number");
+            A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the number");
+            B = Convert.ToInt32(Console.ReadLine());
+            int rem = A % B;
 
-            Console.WriteLine("Enter a number");
-            n = Convert.ToInt32(Console.ReadLine());
-            res = n;
-            while (res > 0)
+            if (rem > 5)
             {
-                rem = res % 10;
-                sum = sum * 10 + rem;
-                res = res / 10;
+                Console.WriteLine("rem is greater than 5");
             }
-            Console.WriteLine(res);
-            if (res = sum)
+            else if (rem > 5)
             {
-                Console.WriteLine("{0} is divisible by 8", n);
+                Console.WriteLine("rem is less than 5");
             }
-            else
-            {
-                Console.WriteLine("{0} is not divisible by8", n);
-            }
+
             Console.ReadLine();
+
+
+
         }
+
     }
 }
+
+
+
+
