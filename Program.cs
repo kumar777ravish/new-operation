@@ -1,40 +1,49 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ravish.test2nd
+namespace PALLENDROME
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int A, B;
+            int n, sum = 0, t,r ;
             Console.WriteLine("Enter the number");
-            A = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the number");
-            B = Convert.ToInt32(Console.ReadLine());
-            int rem = A % B;
-
-            if (rem > 5)
+            n = Convert.ToInt32(Console.ReadLine());
+            t = n;
+            while (n > 0)
             {
-                Console.WriteLine("rem is greater than 5");
+                r = n % 10;
+                sum = sum * 10 + r;
+                n = n / 10;
             }
-            else if (rem > 5)
+            if (t == sum)
             {
-                Console.WriteLine("rem is less than 5");
+                Console.WriteLine("{0} is a pallindrome", sum);
             }
-
+            else
+            {
+                Console.WriteLine("{0} is not a pallindrome", sum);
+            }
             Console.ReadLine();
+
+               
+
+
+
+
+
+                ;
+                
+
+
 
 
 
         }
-
     }
 }
-
-
-
-
