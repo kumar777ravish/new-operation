@@ -1,49 +1,39 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace PALLENDROME
+  
+namespace divisiblity_testing
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n, sum = 0, t,r ;
-            Console.WriteLine("Enter the number");
+            int n;
+            int sum = 0;
+            int rem;
+            int res;
+
+            Console.WriteLine("Enter a number");
             n = Convert.ToInt32(Console.ReadLine());
-            t = n;
-            while (n > 0)
+            res = n;
+            while (res > 0)
             {
-                r = n % 10;
-                sum = sum * 10 + r;
-                n = n / 10;
+                rem = res % 10;
+                sum = sum * 10 + rem;
+                res = res / 10;
             }
-            if (t == sum)
+            Console.WriteLine(res);
+            if (res = sum)
             {
-                Console.WriteLine("{0} is a pallindrome", sum);
+                Console.WriteLine("{0} is divisible by 8", n);
             }
             else
             {
-                Console.WriteLine("{0} is not a pallindrome", sum);
+                Console.WriteLine("{0} is not divisible by8", n);
             }
             Console.ReadLine();
-
-               
-
-
-
-
-
-                ;
-                
-
-
-
-
-
         }
     }
 }
